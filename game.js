@@ -1,68 +1,77 @@
-document.addEventListener('DOMCotentLoaded', () =>{
+document.addEventListener('DOMContentLoaded', () =>{
     //All the boxes representing the the cards
         const boxArray = [
             {
                 name: 'first',
-                image: 'images/first.png'
+                img:'images/first.png'
             },
             {
                 name: 'first',
-                image: 'images/first.png'
+                img:'images/first.png'
             },
             {
                 name: 'second',
-                image: 'images/second.png'
+                img:'images/second.png'
             },
             {
                 name: 'second',
-                image: 'images/second.png'
+                img:'images/second.png'
             },
             {
                 name: 'third',
-                image: 'images/third.png'
+                img:'images/third.png'
             },
             {
                 name: 'third',
-                image: 'images/third.png'
+                img:'images/third.png'
             },
             {
                 name: 'fourth',
-                image: 'images/fourth.png'
+                img:'images/fourth.png'
             },
             {
                 name: 'fourth',
-                image: 'images/fourth.png'
+                img:'images/fourth.png'
             },
             {
                 name: 'fifth',
-                image: 'images/fifth.jpeg'
+                img:'images/fifth.jpeg'
             },
             {
                 name: 'fifth',
-                image: 'images/fifth.jpeg'
+                img:'images/fifth.jpeg'
             },
             {
                 name: 'sixth',
-                image: 'images/sixth.png'
+                img:'images/sixth.png'
             },
             {
                 name: 'sixth',
-                image: 'images/sixth.png'
-            },
-        ] 
-    }
+                img:'images/sixth.png'
+            }
+         ]
     
-    const gameBox = document.querySelector('.game')
+    const gameBox = document.querySelector('.box')
     // making the game board
     function gameBoard(){
         for(let i = 0; i < boxArray.length; i++){
-            var box = document.createElement('img')
-            box.setAttribute('src', 'images')
+            var card = document.createElement('img')
+            card.setAttribute('src', 'images/background.png')
+            card.setAttribute('data-id', i)
+            card.addEventListener('click', turnCard)
+            gameBox.appendChild(card)
         }
     }
     
+
+    //checking cards that match
+
+    //the turnCard function
+    function turnCard(){
+        let cardId =this.getAttribute('data-Id')
+    }
     
-    
+    gameBoard()
     
     
     
@@ -80,6 +89,5 @@ document.addEventListener('DOMCotentLoaded', () =>{
     
     
     
-    
-    )
-    
+ 
+})
